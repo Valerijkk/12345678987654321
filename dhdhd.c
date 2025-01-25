@@ -56,7 +56,7 @@ typedef struct {
 } GameState;
 
 
-// Инициализация начальных значений
+// Инициализация начальных значений(Валера)
 void initGame(GameState* game) {
     // Мяч в центре
     game->ballX = WIDTH / 2;
@@ -77,7 +77,7 @@ void initGame(GameState* game) {
 }
 
 
-// Функция отрисовки кадра (ASCII-графика в терминале)
+// Функция отрисовки кадра (ASCII-графика в терминале)(Валера)
 void drawFrame(const GameState* game) {
     // Очистка экрана (для Windows используйте "cls")
     system("clear");
@@ -135,7 +135,7 @@ void drawFrame(const GameState* game) {
 }
 
 
-// Сброс мяча в центр после пропущенного гола
+// Сброс мяча в центр после пропущенного гола(Никита) 
 void resetBall(GameState* game, int direction) {
     game->ballX = WIDTH / 2;
     game->ballY = HEIGHT / 2;
@@ -144,7 +144,7 @@ void resetBall(GameState* game, int direction) {
 }
 
 
-// Обработка пользовательского ввода (пошагово)
+// Обработка пользовательского ввода (пошагово)(НИКИТА)
 void processInput(GameState* game, char input) {
     // Приведём к нижнему регистру
     input = (char)tolower((unsigned char)input);
@@ -185,7 +185,7 @@ void processInput(GameState* game, char input) {
 }
 
 
-// Обновление позиции мяча, проверка на столкновения
+// Обновление позиции мяча, проверка на столкновения(ЖЕНЯ)
 void updateBall(GameState* game) {
     // Двигаем мяч
     game->ballX += game->ballDX;
@@ -241,7 +241,7 @@ void updateBall(GameState* game) {
     }
 }
 
-
+//ЖЕНЯ, НИКИТА, ВАЛЕРА 
 int main(void) {
     GameState game;
     initGame(&game);
